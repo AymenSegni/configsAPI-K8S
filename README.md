@@ -8,7 +8,6 @@ Docker and Minikube.
 The service is automatically deployed to kubernetes with Bash scripts.
 > 💡 The deployment varaiables are rendered to the yamls files using the `envsubst` magic
 
-----
 
 ## Introduction
 This README walks you through the process of running the Configs API on a Kubernetes cluster.
@@ -85,7 +84,7 @@ The directory that holds the app source code and configuration files for this la
    - `requirements.txt`: holds all the required pckages to run the Python code
 
 2. `/deployment `: holds the yaml manifest Kubernetes deployment
-   - `app-deployment.yaml`: contain the yaml configs to deploy the Configs flask api based on the docker image created in // `/src`
+   - `app-deployment.yaml`: contain the yaml configs to deploy the Configs flask api based on the docker image created in `/src`
    - `app-service.yaml`: config the Configs API service in Kubernetes
    - `redis.yaml`: deploy redis service the K8S cluster
 
