@@ -1,8 +1,6 @@
 # configsAPI-K8S
 Deploying stateless Python Flask app with Redis on Kubernetes
 
-----
-
 *Configs API* is a simple HTTP service that stores and returns configurations that satisfy certain conditions.
 This document shows you how to develop, deploy and run the Configs API on Kubernetes with Python Flask, Redis, YAML, Bash
 Docker and Minikube.
@@ -44,7 +42,7 @@ To create Configs  application and deploy it on Kubernetes, you will typically f
 
 Clone the repository. This will clone the sample repository and make it the current directory:
 
-* `$ git `
+* `$ git https://github.com/AymenSegni/configsAPI-K8S.git`
 
 * `$ cd configsAPI-K8S`
 
@@ -315,6 +313,10 @@ Finally, we can write and read the configs data from the Redis database.
 
 
 ----
+
+
+
+
 
 **Congratulations! our Configs application has been successfully deployed on Kubernetes!**
 
