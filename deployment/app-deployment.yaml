@@ -1,0 +1,27 @@
+#jinja2: variable_start_string:'${', variable_end_string:'}', trim_blocks: True
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-redis-api-deployment
+  labels:
+    app: flask-redis-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-redis-api
+  template:
+    metadata:
+      labels:
+        app: flask-redis-api
+    spec:
+      containers:
+      - name: flask-redis-api
+        image: aymensegni/flask-redis-api:dev
+        env:
+        - name: SERVE_PORT
+          value: "${SERVE_PORT}"
+        - name: FLASK_ENV
+          value: "development"
+        - name: REDIS_HOST
+          value: "redis-master"
